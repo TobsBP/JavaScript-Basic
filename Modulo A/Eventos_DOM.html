@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos</title>
+  <style>
+    body{
+      background-color: black;
+      color: white;
+    }
+
+    #area {
+      font: normal 20pt normal;
+      background-color: white;
+      color: black;
+      text-align: center;
+      width: 200px;
+      height: 200px;
+      line-height: 200px;
+      border-radius: 20px;
+    }
+
+    #area:hover {
+      background-color: rgb(204, 204, 204);
+    }
+
+    .area_2 {
+      font: normal 20pt normal;
+      background-color: white;
+      color: black;
+      text-align: center;
+      width: 200px;
+      height: 200px;
+      line-height: 200px;
+      border-radius: 20px;
+    }
+
+    .area_2:hover {
+      background-color: rgb(204, 204, 204);
+    }
+
+    .area_3 {
+      font: normal 20pt normal;
+      background-color: white;
+      color: black;
+      text-align: center;
+      width: 200px;
+      height: 200px;
+      line-height: 200px;
+      border-radius: 20px;
+    }
+
+    .area_3:hover {
+      background-color: rgb(204, 204, 204);
+    }
+  
+  </style>
+</head>
+<body>
+  <div id="area" onclick="clicar()">
+    Interaja...
+  </div>
+--------------------------------------
+  <div class="area_2" onmouseenter="entrar()">
+    Interaja...
+  </div>
+
+  --------------------------------------
+  <div class="area_3" onmouseout="saiu()">
+    Interaja...
+  </div>
+
+  <script>
+    var area = window.document.getElementById('area')
+    var area_2 = window.document.getElementsByClassName('area_2')[0]
+    var area_3 = window.document.getElementsByClassName('area_3')[0]
+
+      function clicar() {
+      area.innerText = 'Clicou!'
+    }
+
+    function entrar() {
+      area_2.innerText = 'Entrou!'
+    }
+
+    function saiu() {
+      area_3.innerText = 'Saiu!'
+    }
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introdução DOM</title>
+  <style>
+    body{
+      background-color: black;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <p>Aqui vai o resultado</p>
+  <p>Seja o piloto de suas histórias e voe mais alto que conseguir!</p>
+  <div id="press">Clique aqui</div>
+
+  <script>
+    var p1 = window.document.getElementsByTagName('p')[0]
+    window.document.write(p1.innerText)
+    p1.style.color = 'blue'
+
+    var p2 = window.document.getElementById('press')
+    //window.document.write(p2.innerText)
+    p2.innerText = 'Olá'
+
+    var d = window.document.querySelector('div#press')
+    d.innerText = 'OOOO'
+  </script>
+
+</body>
+</html>

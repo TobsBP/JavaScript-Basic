@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+    }
+
+    #res {
+      margin-top: 10px;
+
+    }
+  </style>
+</head>
+<body>
+  <input type="number" name="number" id="number">
+  <button type="submit" onclick="Calc()">Enviar</button>
+
+  <div id="res">
+    Resposta
+  </div>
+
+  <script>
+    function Calc() {
+      var vel = Number(document.getElementById('number').value)
+      var res = document.getElementById('res')
+
+      if (vel > 60) {
+        res.innerText = "Você foi multado!!"
+      } else {
+        res.innerText = "Você não foi multado!!"
+      }
+    }
+  </script>
+</body>
+</html>
